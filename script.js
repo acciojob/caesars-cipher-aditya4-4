@@ -18,9 +18,12 @@ function rot13(encodedStr){
 		if(haskey(key) == true){
 			decodedArr.push(lookup[key]);
 		}
+		else{
+			decodedArr.push(key);
+		}
 	}
-
-  return  decodedArr;//return decodedArr
+    let result = decodedArr.join("");
+  return  result;//return decodedArr
 }
 function haskey(key){
     for(let item in lookup){

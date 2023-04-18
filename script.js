@@ -18,9 +18,6 @@ function rot13(encodedStr){
 		if(haskey(key) == true){
 			decodedArr.push(lookup[key]);
 		}
-		else{
-			decodedArr.push(key);
-		}
 	}
 
   return  decodedArr;//return decodedArr

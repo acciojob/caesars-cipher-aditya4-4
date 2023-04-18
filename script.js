@@ -13,10 +13,26 @@ const lookup = {
 function rot13(encodedStr){
    let decodedArr = []; // Your Result goes here
   // Only change code below this line
+	for(let char in encodedStr){
+		let key = encodedStr[char];
+		if(haskey(key) == true){
+			decodedArr.push(lookup[key]);
+		}
+		else{
+			decodedArr.push(key);
+		}
+	}
 
-  return ;//return decodedArr
+  return  decodedArr;//return decodedArr
 }
-
+function haskey(key){
+    for(let item in lookup){
+        if(item == key){
+            return true;
+        }
+    }
+    return false;
+}
 // You can test your code by running the above function and printing it to console by pressing the run button at the top. To run it with input 36, uncomment the following line
 
 // console.log(rot13("SERR YBIR? NPPVBWBO"));
